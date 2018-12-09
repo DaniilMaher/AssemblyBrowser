@@ -12,16 +12,15 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using AssemblyBrowser.ViewModel;
 
 namespace AssemblyBrowser
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
+            AssemblyVeiwModel assembly = new AssemblyVeiwModel();
             InitializeComponent();
         }
     }
