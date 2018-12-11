@@ -1,12 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Reflection;
 
 namespace AssemblyAnalyzer
 {
-    class Namespace
+    public class Namespace
     {
+        private List<TypeInfo> types;
+
+        public List<TypeInfo> Types
+        {
+            get
+            {
+                return new List<TypeInfo>(types);
+            }
+        }
+
+        public string Name
+        {
+            get;
+            private set;
+        }
+
+        public void AddType(TypeInfo type)
+        {
+            types.Add(type);
+        }
+
+        public Namespace(string name)
+        {
+            types = new List<TypeInfo>();
+            Name = name;
+        }
     }
 }
