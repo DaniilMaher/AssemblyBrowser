@@ -30,7 +30,7 @@ namespace AssemblyBrowser.ViewModel
             private set { }
         }
         
-        public IEnumerable<FieldViewModel> Fields
+        public IEnumerable<object> Members
         {
             get
             {
@@ -38,24 +38,10 @@ namespace AssemblyBrowser.ViewModel
                 {
                     yield return new FieldViewModel(field);
                 }
-            }
-        }
-
-        public IEnumerable<PropertyViewModel> Properties
-        {
-            get
-            {
                 foreach (PropertyInfo property in type.DeclaredProperties)
                 {
                     yield return new PropertyViewModel(property);
                 }
-            }
-        }
-
-        public IEnumerable<MethodViewModel> Methods
-        {
-            get
-            {
                 foreach (MethodInfo method in type.DeclaredMethods)
                 {
                     yield return new MethodViewModel(method);

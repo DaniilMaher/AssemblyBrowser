@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/ConsoleABTest/ConsoleABTest.csproj
+/ConsoleABTest/Program.cs
+/ConsoleABTest/App.config
+/ConsoleABTest/Properties/AssemblyInfo.cs
